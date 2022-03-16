@@ -5,10 +5,10 @@ import (
 	"strings"
 )
 
-func GenerateNumbers(numbers []string) {
+func GenerateNumbers(numbers []int) {
 	// generate numbers from 1 to 100
 	for i := range numbers {
-		numbers[i] = strconv.Itoa(i)
+		numbers[i] = i
 	}
 
 }
