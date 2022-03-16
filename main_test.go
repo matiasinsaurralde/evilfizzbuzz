@@ -23,6 +23,24 @@ func FizzBuzz3And5(list []int) []string {
 	return strList
 }
 
+func FizzBuzz3(list []int) []string{
+	strList := make([]string, len(list))
+	for i, num := range list {
+		if num%3 == 0 {
+			strList[i] = "Fizz"
+		} else {
+			strList[i] = strconv.Itoa(num)
+		}
+	}
+	return strList
+}
+
+func TestEvilFizzBuzz_FizzBuzz3(t *testing.T) {
+	var list = []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12}
+	var ExpectedList = []string{"1", "2", "Fizz", "4", "5", "Fizz", "7", "8", "Fizz", "10", "11", "Fizz"}
+	assert.Equal(t, ExpectedList, FizzBuzz3(list))
+}
+
 func TestEvilFizzBuzz_FizzBuzz3And5(t *testing.T) {
 	var list = []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 30, 60, 75, 90, 100}
 	var ExpectedList = []string{"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14",
