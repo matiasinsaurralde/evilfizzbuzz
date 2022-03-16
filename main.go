@@ -1,6 +1,9 @@
 package main
 
-import "strconv"
+import (
+	"strconv"
+	"strings"
+)
 
 func GenerateNumbers(numbers []string) {
 	// generate numbers from 1 to 100
@@ -25,4 +28,8 @@ func replaceDivisiblesby5(numbers []string) []string {
 		}
 	}
 	return result
+}
+
+func GetCommaDelimitedString(input []string) string {
+	return strings.Join(input[:], ",")
 }
