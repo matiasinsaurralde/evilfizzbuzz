@@ -42,6 +42,13 @@ func FizzBuzz3(list []int) []string {
 	return strList
 }
 
+func Test_Divideby5(t *testing.T) {
+	numbersToDivide := []string{"5", "10", "3", "1"}
+
+	result := replaceDivisiblesby5(numbersToDivide)
+	assert.Equal(t, []string{"Buzz", "Buzz", "3", "1"}, result)
+}
+
 func TestEvilFizzBuzz_FizzBuzz3(t *testing.T) {
 	var list = []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12}
 	var ExpectedList = []string{"1", "2", "Fizz", "4", "5", "Fizz", "7", "8", "Fizz", "10", "11", "Fizz"}
